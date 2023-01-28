@@ -19,7 +19,13 @@ class UserSeeder extends Seeder
             "role_id"=>1,
             "name"=>"Manager",
             "email"=>"manage@company.com",
-            "password"=>Hash::make('manage123')
+            "password"=>Hash::make('password')
+        ]);
+        User::create([
+            "role_id"=>2,
+            "name"=>"Example Client",
+            "email"=>"client@company.com",
+            "password"=>Hash::make('password')
         ]);
     }
 }

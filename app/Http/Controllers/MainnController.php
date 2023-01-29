@@ -12,7 +12,7 @@ class MainnController extends Controller
     }
     public function dashboard(){
         return view('dashboard')->with([
-            "applications"=>Application::paginate(10),
+            "applications"=>Application::latest()->paginate(10),
         ]);
     }
 }
